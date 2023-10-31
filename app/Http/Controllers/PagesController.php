@@ -9,7 +9,16 @@ class PagesController extends Controller
 {
     public function index() {
 
-        $data = Listing::all();
+        $data = array(
+            'heading' => 'Latest Gigs',
+            'listings' => Listing::all()
+        );
         return view('listings')->with($data);
     }
+
+    public function show($id) {
+        $listing = Listing::find($id);
+        return view('listing')->with('listing', $listing);
+    }
+
 }
