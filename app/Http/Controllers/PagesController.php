@@ -13,15 +13,15 @@ class PagesController extends Controller
             'heading' => 'Latest Gigs',
             'listings' => Listing::all()
         );
-        return view('listings')->with($data);
+        return view('listings.index')->with($data);
     }
 
     public function show($id) {
 
         $listing = Listing::find($id);
-        
+         
         if($listing) {
-            return view('listing')->with('listing', $listing);
+            return view('listings.show')->with('listing', $listing);
         }
     }
 
