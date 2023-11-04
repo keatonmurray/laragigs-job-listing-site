@@ -11,7 +11,7 @@ class ListingsController extends Controller
 
         $data = array(
             'heading' => 'Latest Gigs',
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->get()
         );
         return view('listings.index')->with($data);
     }
