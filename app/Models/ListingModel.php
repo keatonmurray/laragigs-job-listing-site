@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ListingModel extends Model
 {
     use HasFactory;
+
+    public function scopeFilter() {
+        
+    }
 }
