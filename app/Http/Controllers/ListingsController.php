@@ -11,7 +11,7 @@ class ListingsController extends Controller
 
         $data = array(
             'heading' => 'Latest Gigs',
-            'listings' => Listing::latest()->filter(request(['tag']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
         );
         return view('listings.index')->with($data);
     }
