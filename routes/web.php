@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', 'App\Http\Controllers\PagesController@index');
-Route::get('/listing/{id}', 'App\Http\Controllers\PagesController@show');
+
+Route::get('/', [ListingsController::class, 'index']);
+Route::get('/listing/{id}', [ListingsController::class, 'index']);
 

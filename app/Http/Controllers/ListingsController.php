@@ -5,7 +5,7 @@ use App\Models\Listing;
 
 use Illuminate\Http\Request;
 
-class PagesController extends Controller
+class ListingsController extends Controller
 {
     public function index() {
 
