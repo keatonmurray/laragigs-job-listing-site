@@ -16,5 +16,6 @@ use App\Http\Controllers\ListingsController;
 */
 
 Route::get('/', [ListingsController::class, 'index']);
+Route::get('/listing/create', [ListingsController::class, 'create']);
 Route::get('/listing/{id}', [ListingsController::class, 'index']);
 
