@@ -5,7 +5,8 @@
         <h2 class="text-2xl font-bold uppercase mb-1">Create a Gig</h2>
         <p class="mb-4">Post a gig to find a developer</p>
     </header>
-    <form action="">
+    <form method="POST" action="/listing">
+        @csrf
         <div class="mb-6">
             <label for="company" class="inline-block text-lg mb-2" >Company Name</label>
             <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company"/>
