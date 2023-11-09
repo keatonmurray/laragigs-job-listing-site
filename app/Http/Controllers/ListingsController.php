@@ -43,8 +43,9 @@ class ListingsController extends Controller
             'description' => 'required'
         ]);
 
-        //Listing::create($formFields);
+        Listing::create($formFields);
         return redirect('/');
+
     }
 
 }
