@@ -12,7 +12,7 @@ class ListingsController extends Controller
 
         $data = array(
             'heading' => 'Latest Gigs',
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(6)
         );
         return view('listings.index')->with($data);
     }
@@ -40,6 +40,7 @@ class ListingsController extends Controller
             'website' => 'required',
             'email' => ['required', 'email'],
             'tags' => 'required',
+            'logo' => 'required',
             'description' => 'required'
         ]);
 
