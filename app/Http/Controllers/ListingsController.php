@@ -12,7 +12,7 @@ class ListingsController extends Controller
 
         $data = array(
             'heading' => 'Latest Gigs',
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)
         );
         return view('listings.index')->with($data);
     }
